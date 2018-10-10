@@ -1,17 +1,24 @@
 package schemaTester;
 
-import org.json.simple.JSONObject;
+import org.json.simple.*;
+
+
 
 public class main {
 
-	public static void main(String[] args) {
-		String directoryFilePath = "src/schemas";
-   
-		JSONObject allSchemaTests = SchemaTestGenerator.createSchemaTestsFromSchemaFiles(directoryFilePath);
-		
-		System.out.println(allSchemaTests);
-		
-		JsonFileWriter.writeJson(allSchemaTests);
-		
-	}
+    public static void main(String[] args) throws Exception {
+        String directoryFilePath = "src/schemas";
+
+        JSONObject allSchemaTests = SchemaTestGenerator.createSchemaTestsFromSchemaFiles(directoryFilePath);
+
+        JsonFileWriter.writeJson(allSchemaTests);
+
+        CallAPI.animalCreate();
+
+    }
 }
+
+
+
+
+
