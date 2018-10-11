@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component inheritJdk="true">
+	<exclude-output/>
+	<contentEntry url="file://$MODULE_DIR$"/>
+	<levels>
+		<level name="json-simple-1.1" value="project"/>
+		<level name="com.google.code.gson:gson:2.3.1" value="project"/>
+		<level name="commons-codec-1.2" value="project"/>
+		<level name="okhttp-3.11.0" value="project"/>
+		<level name="com.squareup.okio:okio:1.13.0" value="project"/>
+		<level name="java-json" value="project"/>
+	</levels>
+</component>

@@ -70,8 +70,7 @@ public class Helpers {
         String responseBody = response.body().string();
         int statusCode = response.code();
         String message = response.message();
-        System.out.println(statusCode);
-        System.out.println(message);
+        System.out.println("here is the status code/message: " + statusCode + " : " +  message);
         return responseBody;
     }
 

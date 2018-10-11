@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eclipse-userlibraries>
+  <library name="com.google.code.gson:gson:2.3.1">
+    <archive path="/Users/briansteele/.m2/repository/com/google/code/gson/gson/2.3.1/gson-2.3.1.jar" />
+  </library>
+  <library name="json-simple-1.1">
+    <archive path="/Users/briansteele/Google Drive/Work/libs/json-simple-1.1.jar" />
+  </library>
+  <library name="commons-codec-1.2">
+    <archive path="/Users/briansteele/Google Drive/Work/libs/jar_files/commons-codec-1.2.jar" />
+    <archive path="/Users/briansteele/Google Drive/Work/libs/jar_files/commons-httpclient-3.1.0.jar" />
+    <archive path="/Users/briansteele/Google Drive/Work/libs/jar_files/commons-httpclient-3.1.jar" />
+    <archive path="/Users/briansteele/Google Drive/Work/libs/jar_files/commons-logging-1.0.4.jar" />
+  </library>
+  <library name="okhttp-3.11.0">
+    <archive path="/Users/briansteele/Google Drive/Work/libs/okhttp-3.11.0.jar" />
+  </library>
+  <library name="com.squareup.okio:okio:1.13.0">
+    <archive path="/Users/briansteele/.m2/repository/com/squareup/okio/okio/1.13.0/okio-1.13.0.jar" />
+    <archive path="/Users/briansteele/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar" />
+  </library>
+  <library name="java-json">
+    <archive path="/Users/briansteele/Google Drive/Work/libs/java-json.jar" />
+  </library>
+</eclipse-userlibraries>
+

@@ -14,17 +14,17 @@ public class main {
         String credsJson = data.vetCredsJson(); // credsJson = {"username": "vet1", "password": "pass1234", "apiKey": "GVL"}
 
         String token = example.getTokenRequest("https://regression.globalvetlink.com/gvl2/api/gettoken", credsJson); // token = {tokenCreateByTheCall}
-        System.out.println("here is the token: " + token);
+        System.out.println("here is the token: " + token + "\n");
 
         // declare variable and store data to be updated in it
         String contactEditData = data.contactFirstName("Poem");
-        System.out.println(contactEditData);
+        System.out.println("here is the data I plan to update: \n" + contactEditData + "\n");
 
         String url = data.REG_BASE_URL() + "origin/2091345";
-        System.out.println(url);
+        System.out.println("here is the url: " + url + "\n");
 
         String thing = example.doGetRequest(url, token);
-        System.out.println("This should be the damn contact data: " + thing);
+        System.out.println("here is the damn contact data: \n" + thing + "\n");
 
         // declare variable and store updated response data in it
 
