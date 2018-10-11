@@ -7,9 +7,9 @@ import org.json.JSONObject;
  * Created by briansteele on 10/9/18.
  */
 
-public class CallAPI {
+public class CallType {
 
-    public static Object getToken(){
+    public static String get(String endpoint){
 
         OkHttpClient client = new OkHttpClient();
 
@@ -18,7 +18,7 @@ public class CallAPI {
 
         Request request = new Request.Builder()
                 // TODO: Need to generisize this url() instead of hardcoding it
-                .url("https://regression.globalvetlink.com/gvl2/api/gettoken")
+                .url("https://regression.globalvetlink.com/gvl2/api/" + endpoint)
                 .addHeader("Accept", "application/json")
                 .addHeader("Content-Type", "application/json")
                 .addHeader("Cache-Control", "no-cache")
@@ -29,6 +29,7 @@ public class CallAPI {
             String responseBody = responses.body().string();
             JSONObject jsonResponse = new JSONObject(responseBody);
             String token = jsonResponse.getString("access_token");
+//            System.out.println(token);
             return token;
 
         } catch(Exception e) {
@@ -36,9 +37,9 @@ public class CallAPI {
         } return null;
     }
 
-    public static Object animalCreate() throws Exception {
+    public static Object animalCreate(String endpoint) throws Exception {
 
-        String newToken = getToken().toString();
+        String newToken = get(endpoint).toString();
 
         OkHttpClient client = new OkHttpClient();
 
@@ -54,7 +55,7 @@ public class CallAPI {
 				.addHeader("Cache-Control", "no-cache")
                 .post(body)
 				.build();
-        
+
         Response responses = client.newCall(request).execute();
         String responseBody = responses.body().string();
         System.out.println(responseBody);
