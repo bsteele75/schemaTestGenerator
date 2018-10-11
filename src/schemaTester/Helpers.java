@@ -27,9 +27,10 @@ public class Helpers {
         } return null;
     }
 
-    String doGetRequest(String url) throws IOException {
+    String doGetRequest(String url, String token) throws IOException {
         Request request = new Request.Builder()
                 .url(url)
+                .addHeader("X-Auth-Token", token)
                 .get()
                 .build();
 

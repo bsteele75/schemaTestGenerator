@@ -15,6 +15,7 @@ public class main {
 
         String token = example.getTokenRequest("https://regression.globalvetlink.com/gvl2/api/gettoken", credsJson); // token = {tokenCreateByTheCall}
         System.out.println("here is the token: " + token);
+
         // declare variable and store data to be updated in it
         String contactEditData = data.contactFirstName("Poem");
         System.out.println(contactEditData);
@@ -22,12 +23,13 @@ public class main {
         String url = data.REG_BASE_URL() + "origin/2091345";
         System.out.println(url);
 
-        String thing = example.doGetRequest(url);
+        String thing = example.doGetRequest(url, token);
         System.out.println("This should be the damn contact data: " + thing);
 
         // declare variable and store updated response data in it
-//        String editContactResponse = example.doPostRequest(data.REG_BASE_URL() + "origin/2091345", contactEditData, token);
-//        System.out.println("here is the response: " + editContactResponse);
+
+        String editContactResponse = example.doPostRequest(data.REG_BASE_URL() + "origin/2091345", contactEditData, token);
+        System.out.println("here is the response: " + editContactResponse);
     }
 }
 
