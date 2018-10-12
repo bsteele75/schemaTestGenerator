@@ -1,4 +1,4 @@
-package schemaTester;
+package schemaTester.practice;
 
 import okhttp3.*;
 import org.json.JSONObject;

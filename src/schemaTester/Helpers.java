@@ -1,6 +1,7 @@
 package schemaTester;
 
 import okhttp3.*;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
@@ -11,22 +12,55 @@ import java.io.IOException;
 public class Helpers {
 
     OkHttpClient client = new OkHttpClient();
-    FixtureData  data   = new FixtureData();
+    Variables var = new Variables();
 
     public static final MediaType JSON
             = MediaType.parse("application/json; charset=utf-8");
 
+    /**
+     * EDIT A CONTACTS FIRST NAME FIELD
+     * @param firstName
+     * @return
+     */
+    String EDIT_CONTACT_FIRST_NAME(String firstName) {
+        return "{\n    \"firstName\":\"" + firstName + "\"," +
+                "\n    \"version\": 100\n}";
+    }
+
+    /**
+     * EDIT A CONTACTS MIDDLE INITIAL FIELD
+     * @param mi
+     * @return
+     */
+    String EDIT_CONTACT_MI(String mi) {
+        return "{'mi':'" + mi + "','version': 100 }";
+    }
+
+
+    /**
+     * FIND THE FIXTURE ID FOR THE SPECIFIED ENDPOINT
+     * @param endpoint
+     * @return
+     */
     String findFixtureIdForEndpoint(String endpoint) {
 
         if (endpoint == "animal") {
-            return data.ANIMAL_ID();
+            return var.C1_ANIMAL1_ID;
 
         } else if (endpoint == "origin") {
-            return data.CONTATCT_ID();
+            return var.C1_CONTACT1__ID;
 
         } return null;
     }
 
+
+    /**
+     * DO A GENERIC GET REQUEST
+     * @param url
+     * @param token
+     * @return
+     * @throws IOException
+     */
     String doGetRequest(String url, String token) throws IOException {
         Request request = new Request.Builder()
                 .url(url)
@@ -39,6 +73,13 @@ public class Helpers {
     }
 
 
+    /**
+     * DO A GET TOKEN REQUEST
+     * @param url
+     * @param json
+     * @return
+     * @throws Exception
+     */
     String getTokenRequest(String url, String json) throws Exception {
 
         RequestBody body = RequestBody.create(JSON, json);
@@ -47,13 +88,21 @@ public class Helpers {
                 .post(body)
                 .build();
         Response response = client.newCall(request).execute();
-        String responseBody = response.body().string();
+        String responseBody = response.body().string().toString();
         JSONObject jsonResponse = new JSONObject(responseBody);
         String token = jsonResponse.getString("access_token");
         return token;
     }
 
-    String doPostRequest(String url, String json, String token) throws Exception {
+    /**
+     * DO A GENERIC PUT REQUEST
+     * @param url
+     * @param json
+     * @param token
+     * @return
+     * @throws Exception
+     */
+    Object doPutRequest(String url, String json, String token) throws Exception {
 
         RequestBody body = RequestBody.create(JSON, json);
         Request request = new Request.Builder()
@@ -62,16 +111,18 @@ public class Helpers {
                 .addHeader("Accept", "application/json")
                 .addHeader("Content-Type", "application/json; charset=UTF-8")
                 .addHeader("Cache-Control", "no-cache")
-                .post(body)
+                .put(body)
                 .build();
-        System.out.println("this is the body: " + body);
 
         Response response = client.newCall(request).execute();
         String responseBody = response.body().string();
         int statusCode = response.code();
         String message = response.message();
         System.out.println("here is the status code/message: " + statusCode + " : " +  message);
-        return responseBody;
+
+        JSONObject jsonResponse = new JSONObject(responseBody);
+
+        return jsonResponse;
     }
 
 
