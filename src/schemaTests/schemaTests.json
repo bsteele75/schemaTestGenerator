@@ -66,14 +66,14 @@
     "color": {
       "string": {
         "aboveBoundary": 101,
-        "passing": 47
+        "passing": 60
       },
       "null": {}
     },
     "gender": {
       "string": {
         "aboveBoundary": 31,
-        "passing": 23,
+        "passing": 13,
         "belowBoundary": 0
       }
     },
@@ -81,13 +81,13 @@
       "null": {},
       "object": {
         "aboveBoundary": 31,
-        "passing": 20
+        "passing": 6
       }
     },
     "headCount": {
       "number": {
         "aboveBoundary": 1000001,
-        "passing": 501008,
+        "passing": 463254,
         "belowBoundary": 0
       }
     },
@@ -112,28 +112,28 @@
     "breed": {
       "string": {
         "aboveBoundary": 101,
-        "passing": 28,
+        "passing": 23,
         "belowBoundary": 0
       }
     },
     "brandDescription": {
       "string": {
         "aboveBoundary": 2041,
-        "passing": 1777
+        "passing": 980
       },
       "null": {}
     },
     "species": {
       "string": {
         "aboveBoundary": 51,
-        "passing": 23,
+        "passing": 17,
         "belowBoundary": 0
       }
     },
     "idTypes": {
       "string": {
         "aboveBoundary": 121,
-        "passing": 101
+        "passing": 42
       },
       "null": {}
     },
@@ -146,7 +146,7 @@
     "name": {
       "string": {
         "aboveBoundary": 101,
-        "passing": 85,
+        "passing": 41,
         "belowBoundary": 0
       }
     },
@@ -176,7 +176,7 @@
     "remarks": {
       "string": {
         "aboveBoundary": 1021,
-        "passing": 161
+        "passing": 719
       },
       "null": {}
     },
@@ -190,7 +190,7 @@
     "brandInspectionNumber": {
       "string": {
         "aboveBoundary": 256,
-        "passing": 230
+        "passing": 246
       },
       "null": {}
     }

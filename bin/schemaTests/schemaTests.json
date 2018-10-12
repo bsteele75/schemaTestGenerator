@@ -66,14 +66,14 @@
     "color": {
       "string": {
         "aboveBoundary": 101,
-        "passing": 47
+        "passing": 74
       },
       "null": {}
     },
     "gender": {
       "string": {
         "aboveBoundary": 31,
-        "passing": 23,
+        "passing": 6,
         "belowBoundary": 0
       }
     },
@@ -81,20 +81,20 @@
       "null": {},
       "object": {
         "aboveBoundary": 31,
-        "passing": 20
+        "passing": 29
       }
     },
     "headCount": {
       "number": {
         "aboveBoundary": 1000001,
-        "passing": 501008,
+        "passing": 929732,
         "belowBoundary": 0
       }
     },
     "dewormedWith": {
       "string": {
         "aboveBoundary": 61,
-        "passing": 50
+        "passing": 58
       },
       "null": {}
     },
@@ -112,28 +112,28 @@
     "breed": {
       "string": {
         "aboveBoundary": 101,
-        "passing": 28,
+        "passing": 96,
         "belowBoundary": 0
       }
     },
     "brandDescription": {
       "string": {
         "aboveBoundary": 2041,
-        "passing": 1777
+        "passing": 1079
       },
       "null": {}
     },
     "species": {
       "string": {
         "aboveBoundary": 51,
-        "passing": 23,
+        "passing": 18,
         "belowBoundary": 0
       }
     },
     "idTypes": {
       "string": {
         "aboveBoundary": 121,
-        "passing": 101
+        "passing": 61
       },
       "null": {}
     },
@@ -146,7 +146,7 @@
     "name": {
       "string": {
         "aboveBoundary": 101,
-        "passing": 85,
+        "passing": 99,
         "belowBoundary": 0
       }
     },
@@ -176,21 +176,21 @@
     "remarks": {
       "string": {
         "aboveBoundary": 1021,
-        "passing": 161
+        "passing": 175
       },
       "null": {}
     },
     "age": {
       "string": {
         "aboveBoundary": 31,
-        "passing": 17
+        "passing": 27
       },
       "null": {}
     },
     "brandInspectionNumber": {
       "string": {
         "aboveBoundary": 256,
-        "passing": 230
+        "passing": 247
       },
       "null": {}
     }
