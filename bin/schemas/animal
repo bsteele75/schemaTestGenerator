@@ -1,0 +1,192 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "https://regression.globalvetlink.com/gvl2/animal",
+  "title": "Animal describes an animal or group of animals",
+  "type": "object",
+  "properties": {
+    "name": {
+      "title": "Animal Name",
+      "description": "An identifying name.",
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1,
+      "maxLength": 100
+    },
+    "breed": {
+      "title": "Breed",
+      "minLength": 1,
+      "description": "The breed.",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 100
+    },
+    "species": {
+      "title": "Species",
+      "description": "The species. Any value is acceptable. However a value from this list is preferred: 'Avian', 'Bovine', 'Canine', 'Caprine', 'Cervidae', 'Equine', 'Feline', 'Ovine', 'Poultry' or 'Swine'.",
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1,
+      "maxLength": 50
+    },
+    "gender": {
+      "title": "Gender",
+      "description": "The gender. Any value is acceptable. However a value from this list is preferred: 'Female', 'Male', 'Neutered/Castrated Male', 'Neutered/Spayed Female' or 'Multiple Genders (Mixed)'.",
+      "type": [
+        "string",
+        "null"
+      ],
+      "minLength": 1,
+      "maxLength": 30
+    },
+    "headCount": {
+      "title": "Head Count",
+      "description": "1 for an animal. 2 to 1,000,000 for a group of animals. null and blank values will be rejected, but omitting the property from the POST request will default to 1.",
+      "type": [
+        "string",
+        "number"
+      ],
+      "minimum": 1,
+      "maximum": 1000000,
+      "default": 1
+    },
+    "color": {
+      "title": "Color",
+      "description": "The color. Required only for these species: 'Canine', 'Equine' and 'Feline'.",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 100
+    },
+    "age": {
+      "title": "Age",
+      "description": "The age. Required only if dob is blank or null.",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 30
+    },
+    "dob": {
+      "title": "Date of Birth",
+      "description": "The date of birth. Required only if age is blank or null. -1 = not set",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "dobAccuracy": {
+      "title": "DOB Accuracy",
+      "description": "One of the following: 'hours', 'days', 'weeks', 'months' or 'years'. Required only if dob is NOT blank or null. -1 = not set",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "dod": {
+      "title": "Date of Death",
+      "description": "The date of death.",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "idTypes": {
+      "title": "ID Types",
+      "description": "A comma-delimited list of Id Types.",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 120
+    },
+    "ids": {
+      "title": "IDs",
+      "description": "If headCount is 1, a comma-delimited list of Ids, one for each Id Type. If headCount is greater than 1, a string with the following format: [[\"1\",\"21\"],[\"2\",\"22\"],[\"3\",\"23\"],[\"4\",\"24\"],[\"5\",\"25\"],[\"6\",\"26\"],[\"7\",\"27\"],[\"8\",\"28\"],[\"9\",\"29\"],[\"10\",\"30\"],[\"11\",\"31\"]]. One set of bracketed Ids for each Animal in the Group and a comma-delimited list of Ids, one for each Id Type, within the brackets. Each Id needs to be enclosed in double quotes. All ID Types must have one and only one corresponding ID for each animal.",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "markings": {
+      "title": "Markings",
+      "description": "If species is Equine and remarks is blank, then at least one of the markings values is required; i.e. must not be null or blank.",
+      "type": [
+        "object",
+        "null"
+      ],
+      "maxLength": 30
+    },
+    "dewormedWith": {
+      "title": "Dewormed With",
+      "description": "The drug used to deworm the animal or group.",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 60
+    },
+    "remarks": {
+      "title": "Remarks",
+      "description": "Required if species is Equine and all markings values are null or blank.",
+      "type": [
+        "array",
+        "null"
+      ],
+      "maxLength": 1020
+    },
+    "brandDescription": {
+      "title": "Brand description",
+      "description": "The brand description.",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 2040
+    },
+    "brandInspectionNumber": {
+      "title": "Brand Inspection Number",
+      "description": "The brand inspection number.",
+      "type": [
+        "string",
+        "null"
+      ],
+      "maxLength": 255
+    },
+    "origin_id": {
+      "description": "The id of a valid Owner (Origin). If the id is invalid it will be ignored.",
+      "type": [
+        "string",
+        "number"
+      ]
+    },
+    "id": {
+      "description": "The id of this animal record.",
+      "type": [
+        "string",
+        "number"
+      ]
+    },
+    "version": {
+      "description": "The current version number of this animal record.",
+      "type": [
+        "string",
+        "number"
+      ]
+    }
+  },
+  "dependencies": {
+    "idTypes": [
+      "ids"
+    ],
+    "ids": [
+      "idTypes"
+    ]
+  }
+}

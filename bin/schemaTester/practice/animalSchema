@@ -3,6 +3,7 @@
   "id": "http://localhost:9294/segway/jsonSchemas/animal_response.json",
   "title": "Animal describes an animal or group of animals",
   "schemaName": "animalSchema",
+  "endpoint": "animal/",
   "type": "object",
   "properties": {
     "name": {
