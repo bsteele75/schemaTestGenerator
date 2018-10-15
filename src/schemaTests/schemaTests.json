@@ -1,4 +1,149 @@
 {
+  "null": {
+    "gender": {
+      "string": {
+        "aboveBoundary": 31,
+        "passing": 5,
+        "belowBoundary": 0
+      },
+      "null": {}
+    },
+    "color": {
+      "string": {
+        "aboveBoundary": 101,
+        "passing": 69
+      },
+      "null": {}
+    },
+    "markings": {
+      "null": {},
+      "object": {
+        "aboveBoundary": 31,
+        "passing": 6
+      }
+    },
+    "headCount": {
+      "number": {
+        "aboveBoundary": 1000001,
+        "passing": 89431,
+        "belowBoundary": 0
+      },
+      "string": {
+        "passing": 0
+      }
+    },
+    "dewormedWith": {
+      "string": {
+        "aboveBoundary": 61,
+        "passing": 54
+      },
+      "null": {}
+    },
+    "origin_id": {
+      "number": {
+        "passing": 0
+      },
+      "string": {
+        "passing": 0
+      }
+    },
+    "version": {
+      "number": {
+        "passing": 0
+      },
+      "string": {
+        "passing": 0
+      }
+    },
+    "breed": {
+      "string": {
+        "aboveBoundary": 101,
+        "passing": 30,
+        "belowBoundary": 0
+      },
+      "null": {}
+    },
+    "brandDescription": {
+      "string": {
+        "aboveBoundary": 2041,
+        "passing": 625
+      },
+      "null": {}
+    },
+    "species": {
+      "string": {
+        "aboveBoundary": 51,
+        "passing": 27,
+        "belowBoundary": 0
+      },
+      "null": {}
+    },
+    "idTypes": {
+      "string": {
+        "aboveBoundary": 121,
+        "passing": 34
+      },
+      "null": {}
+    },
+    "dob": {
+      "string": {
+        "passing": 0
+      },
+      "null": {}
+    },
+    "name": {
+      "string": {
+        "aboveBoundary": 101,
+        "passing": 22,
+        "belowBoundary": 0
+      },
+      "null": {}
+    },
+    "dod": {
+      "string": {
+        "passing": 0
+      },
+      "null": {}
+    },
+    "ids": {
+      "string": {
+        "passing": 0
+      },
+      "null": {}
+    },
+    "dobAccuracy": {
+      "string": {
+        "passing": 0
+      },
+      "null": {}
+    },
+    "id": {
+      "number": {
+        "passing": 0
+      },
+      "string": {
+        "passing": 0
+      }
+    },
+    "age": {
+      "string": {
+        "aboveBoundary": 31,
+        "passing": 27
+      },
+      "null": {}
+    },
+    "remarks": {
+      "null": {},
+      "array": {}
+    },
+    "brandInspectionNumber": {
+      "string": {
+        "aboveBoundary": 256,
+        "passing": 13
+      },
+      "null": {}
+    }
+  },
   "clinicSchema": {
     "distance": {
       "number": {
@@ -60,139 +205,6 @@
     },
     "equine": {
       "boolean": {}
-    }
-  },
-  "animalSchema": {
-    "color": {
-      "string": {
-        "aboveBoundary": 101,
-        "passing": 60
-      },
-      "null": {}
-    },
-    "gender": {
-      "string": {
-        "aboveBoundary": 31,
-        "passing": 13,
-        "belowBoundary": 0
-      }
-    },
-    "markings": {
-      "null": {},
-      "object": {
-        "aboveBoundary": 31,
-        "passing": 6
-      }
-    },
-    "headCount": {
-      "number": {
-        "aboveBoundary": 1000001,
-        "passing": 463254,
-        "belowBoundary": 0
-      }
-    },
-    "dewormedWith": {
-      "string": {
-        "aboveBoundary": 61,
-        "passing": 50
-      },
-      "null": {}
-    },
-    "origin_id": {
-      "number": {
-        "passing": 0
-      }
-    },
-    "version": {
-      "number": {
-        "passing": 0
-      },
-      "null": {}
-    },
-    "breed": {
-      "string": {
-        "aboveBoundary": 101,
-        "passing": 23,
-        "belowBoundary": 0
-      }
-    },
-    "brandDescription": {
-      "string": {
-        "aboveBoundary": 2041,
-        "passing": 980
-      },
-      "null": {}
-    },
-    "species": {
-      "string": {
-        "aboveBoundary": 51,
-        "passing": 17,
-        "belowBoundary": 0
-      }
-    },
-    "idTypes": {
-      "string": {
-        "aboveBoundary": 121,
-        "passing": 42
-      },
-      "null": {}
-    },
-    "dob": {
-      "string": {
-        "passing": 0
-      },
-      "null": {}
-    },
-    "name": {
-      "string": {
-        "aboveBoundary": 101,
-        "passing": 41,
-        "belowBoundary": 0
-      }
-    },
-    "dod": {
-      "string": {
-        "passing": 0
-      },
-      "null": {}
-    },
-    "ids": {
-      "string": {
-        "passing": 0
-      },
-      "null": {}
-    },
-    "dobAccuracy": {
-      "string": {
-        "passing": 0
-      },
-      "null": {}
-    },
-    "id": {
-      "number": {
-        "passing": 0
-      }
-    },
-    "remarks": {
-      "string": {
-        "aboveBoundary": 1021,
-        "passing": 719
-      },
-      "null": {}
-    },
-    "age": {
-      "string": {
-        "aboveBoundary": 31,
-        "passing": 17
-      },
-      "null": {}
-    },
-    "brandInspectionNumber": {
-      "string": {
-        "aboveBoundary": 256,
-        "passing": 246
-      },
-      "null": {}
     }
   }
 }

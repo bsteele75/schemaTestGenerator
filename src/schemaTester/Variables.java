@@ -1,5 +1,6 @@
 package schemaTester;
 
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 /**
@@ -20,7 +21,9 @@ public class Variables {
      *
      */
     public static String EP_GETTOKEN = "gettoken";
+    public static String EP_ANIMAL = "animal/";
     public static String EP_ORIGIN = "origin/";
+
 
     /**
      * CLINIC USERS

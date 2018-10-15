@@ -2,6 +2,7 @@ package schemaTester;
 
 import okhttp3.*;
 import org.json.JSONObject;
+//import org.json.simple.JSONObject;
 
 import java.io.IOException;
 
@@ -15,6 +16,14 @@ public class Helpers {
 
     public static final MediaType JSON
             = MediaType.parse("application/json; charset=utf-8");
+
+    String buildURLWithEndpoint (JSONObject jsonSchema) throws Exception {
+        if(jsonSchema.getString("id").contains(Variables.REG_SERVER + "animal")) {
+            return Variables.REG_SERVER + Variables.EP_ANIMAL;
+        } else if(jsonSchema.getString("id").contains(Variables.QLT_SERVER + "animal")) {
+            return Variables.QLT_SERVER + Variables.EP_ANIMAL;
+        } return null;
+    }
 
      /**
      * TAKES IN THE URL, KEY TO BE CHANGED, VALUE TO CHANGE KEY TO, TOKEN AND MAKE A PUT CALL
@@ -66,6 +75,9 @@ public class Helpers {
         Request request = new Request.Builder()
                 .url(url)
                 .addHeader("X-Auth-Token", token)
+                .addHeader("Accept", "application/json")
+                .addHeader("Content-Type", "application/json; charset=UTF-8")
+                .addHeader("Cache-Control", "no-cache")
                 .get()
                 .build();
 
